@@ -2,16 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import ModelY from '../components/ModelY.astro'
 ---
 
 <Layout title="Tesla Clone">
 	<Header />
 	
-	<main class="relative w-full h-screen overflow-auto">
-		<Hero />
-		<Hero />
-		<Hero />
-		<Hero />
-		<Hero />
+	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto scroll-smooth">
+		<div class="snap-center">
+			<Hero />
+		</div>
+		
+		<div class="snap-center">
+			<ModelY />
+		</div>
+
+		<div class="snap-center">
+			<Hero />
+		</div>
+		
+		<div class="snap-center">
+			<Hero />
+		</div>
 	</main>
 </Layout>
